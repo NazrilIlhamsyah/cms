@@ -106,7 +106,7 @@
                                     <option value="Galeri" {{ old('atas_kiri') == 'Galeri' ? 'selected' : '' }}>Galeri
                                     </option>
                                     <option value="Peta" {{ old('atas_kiri') == 'Peta' ? 'selected' : '' }}>Peta</option>
-                                    <option value="SDM" {{ old('atas_kiri') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('atas_kiri') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan" {{ old('atas_kiri') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
                                     </option>
@@ -134,7 +134,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('atas_kiri') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('atas_kiri') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>
@@ -163,7 +163,7 @@
                                     </option>
                                     <option value="Peta" {{ old('atas_tengah') == 'Peta' ? 'selected' : '' }}>Peta
                                     </option>
-                                    <option value="SDM" {{ old('atas_tengah') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('atas_tengah') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan"
                                         {{ old('atas_tengah') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
@@ -192,7 +192,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('atas_tengah') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('atas_tengah') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>
@@ -221,7 +221,7 @@
                                     </option>
                                     <option value="Peta" {{ old('atas_kanan') == 'Peta' ? 'selected' : '' }}>Peta
                                     </option>
-                                    <option value="SDM" {{ old('atas_kanan') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('atas_kanan') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan"
                                         {{ old('atas_kanan') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
@@ -250,7 +250,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('atas_kanan') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('atas_kanan') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>
@@ -283,7 +283,7 @@
                                     </option>
                                     <option value="Peta" {{ old('tengah_kiri') == 'Peta' ? 'selected' : '' }}>Peta
                                     </option>
-                                    <option value="SDM" {{ old('tengah_kiri') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('tengah_kiri') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan"
                                         {{ old('tengah_kiri') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
@@ -312,7 +312,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('tengah_kiri') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('tengah_kiri') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>
@@ -339,7 +339,7 @@
                                     <option value="Galeri" {{ old('tengah') == 'Galeri' ? 'selected' : '' }}>Galeri
                                     </option>
                                     <option value="Peta" {{ old('tengah') == 'Peta' ? 'selected' : '' }}>Peta</option>
-                                    <option value="SDM" {{ old('tengah') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('tengah') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan" {{ old('tengah') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
                                     </option>
@@ -367,7 +367,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('tengah') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('tengah') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>
@@ -396,7 +396,7 @@
                                     </option>
                                     <option value="Peta" {{ old('tengah_kanan') == 'Peta' ? 'selected' : '' }}>Peta
                                     </option>
-                                    <option value="SDM" {{ old('tengah_kanan') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('tengah_kanan') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan"
                                         {{ old('tengah_kanan') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
@@ -425,7 +425,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('tengah_kanan') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('tengah_kanan') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>
@@ -458,7 +458,7 @@
                                     </option>
                                     <option value="Peta" {{ old('bawah_kiri') == 'Peta' ? 'selected' : '' }}>Peta
                                     </option>
-                                    <option value="SDM" {{ old('bawah_kiri') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('bawah_kiri') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan"
                                         {{ old('bawah_kiri') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
@@ -487,7 +487,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('bawah_kiri') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('bawah_kiri') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>
@@ -516,7 +516,7 @@
                                     </option>
                                     <option value="Peta" {{ old('bawah_tengah') == 'Peta' ? 'selected' : '' }}>Peta
                                     </option>
-                                    <option value="SDM" {{ old('bawah_tengah') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('bawah_tengah') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan"
                                         {{ old('bawah_tengah') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
@@ -545,7 +545,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('bawah_tengah') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('bawah_tengah') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>
@@ -574,7 +574,7 @@
                                     </option>
                                     <option value="Peta" {{ old('bawah_kanan') == 'Peta' ? 'selected' : '' }}>Peta
                                     </option>
-                                    <option value="SDM" {{ old('bawah_kanan') == 'SDM' ? 'selected' : '' }}>SDM
+                                    {{-- <option value="SDM" {{ old('bawah_kanan') == 'SDM' ? 'selected' : '' }}>SDM
                                     <option value="Kelembagaan"
                                         {{ old('bawah_kanan') == 'Kelembagaan' ? 'selected' : '' }}>
                                         Kelembagaan</option>
@@ -603,7 +603,7 @@
                                     </option>
                                     <option value="Anggaran" {{ old('bawah_kanan') == 'Anggaran' ? 'selected' : '' }}>
                                         Anggaran
-                                    </option>
+                                    </option> --}}
                                     <option value="Kontak" {{ old('bawah_kanan') == 'Kontak' ? 'selected' : '' }}>
                                         Kontak
                                     </option>

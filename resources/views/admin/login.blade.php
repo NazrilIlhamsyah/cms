@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Admin Damkar Provinsi Jawa Barat</title>
+    <title>Admin Digma</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link href="{{ asset('images/LOGO-DAMKAR.png') }}" rel="icon">
 
@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
     <!-- Fonts and icons -->
-    <script src="{{ asset('assets/admin/js/plugin/webfont/webfont.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/plugin/webfont/webfont.min.js') }}"></script> 
     <script>
         WebFont.load({
                     google: {
@@ -40,8 +40,8 @@
 
 <style>
     body {
-        background: white;
-        /* background: linear-gradient(to right, rgb(0, 0, 119), #0004df); */
+      background-image: url("{{ asset('images/ha.jpg') }}")
+        /* background: linear-gradient(to right, rgb(78, 78, 250), #0004df);  */
     }
 </style>
 
@@ -53,25 +53,26 @@
 
         <style>
             .form-control {
-                padding: 11px;
-                width: 400px;
-                border: 0;
-                background: rgb(238, 238, 238);
-                border-radius: 20px;
-                padding-left: 30px;
+                height: 52px;
+                background: #fff;
+                color: #000;
+                font-size: 16px;
+                border-radius: 5px;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border: 1px solid rgba(0, 0, 0, 0.1);
             }
 
             button {
-                width: 400px;
-                border: 0;
-                background: #4154f1;
+                width: 250px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                background: #0096ff;
                 padding: 11px;
                 color: white;
-                border-radius: 23px;
+                border-radius:5px;
                 cursor: pointer;
-                font-size: 17px;
+                font-size: 15px;
             }
-
             button:hover {
                 background: rgb(28, 28, 255);
                 transition: 0.3s;
@@ -81,16 +82,19 @@
                 background: white;
                 border: 2px solid #4154f1;
             }
-
-            h3 {
-                padding-right: 290px;
-                margin-top: 20px;
+           
+            .jarak{
+                padding-top: 2rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 3rem;
             }
+            
+            
         </style>
 
-        <div class="container">
+        {{-- < class="container">
             {{-- <img src="{{ asset('images/LOGO-DAMKAR.png') }}" width="100" alt="Logo Damkar"> --}}
-            <h1>Silahkan Login</h1>
+            {{-- <h1>Silahkan Login</h1>
             <br>
             <h3>Login Admin</h3>
             <form class="" style="width: 430px;" action="/admin/login/proses" method="POST">
@@ -124,13 +128,16 @@
                       align-items-center
                     ">
                 </div>
-            </form><br>
+            </form><br> --}} 
 
 
-            {{-- <div class="card rounded shadow col-sm-5 mt-3">
+            <div class="card rounded col-md-7 col-lg-5">
+                <h1 class="jarak text-primary"> Sign In</h1>
+                <hr>
+                <br>
+               
                 <div class="card-body">
-                    <h3 class="mt-2">Login Admin</h3>
-                    <form class="pt-3" action="/admin/login/proses" method="POST">
+                    <form class="" style="width: 430px;" action="/admin/login/proses" method="POST">
                         @csrf
                         <div class="form-group">
                             <div class="input-icon">
@@ -162,23 +169,14 @@
                             @enderror
                         </div>
                         <div class="mt-3">
-                            <button class="btn btn-primary
-    font-weight-medium" type="submit"
-                                style="width: 95%;">Login</button>
-
+                            <button class="" type="submit">Login</button>
                         </div>
-                        <div
-                            class="
-                      my-2
-                      d-flex
-                      justify-content-between
-                      align-items-center
-                    ">
+                        <div class="my-2 d-flex justify-content-between align-items-center">
                         </div>
                     </form><br>
                 </div>
-            </div> --}}
-        </div>
+            </div> 
+        
     </center>
     <!--   Core JS Files   -->
     <script src="{{ asset('assets/admin/js/core/jquery.3.2.1.min.js') }}"></script>
@@ -224,3 +222,4 @@
 </body>
 
 </html>
+

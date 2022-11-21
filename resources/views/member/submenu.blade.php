@@ -147,7 +147,7 @@
             @if ($submenu->konten->halaman->gambar != null)
                 <img class="rounded" src="{{ $submenu->konten->halaman ? $submenu->konten->halaman->gambar() : 'no_image' }}"
                     alt="Gambar"
-                    style="width: 100%; height: 500px; object-fit: cover; border-top: 5px solid blue; border-bottom: 5px solid red;">
+                    style="width: 100%;">
             @endif
 
             @if ($submenu->konten->halaman->teks)
@@ -329,7 +329,7 @@
             @if ($submenu->konten->artikel->gambar != null)
                 <img class="rounded" src="{{ $submenu->konten->artikel ? $submenu->konten->artikel->gambar() : 'no_image' }}"
                     alt="Gambar"
-                    style="width: 100%; height: 500px; object-fit: cover; border-top: 5px solid blue; border-bottom: 5px solid red;">
+                    style="width: 100%;">
             @endif
             <h1 class="mt-4 text-uppercase">{{ $submenu->konten->artikel->judul }}</h1>
             <div class="card border-0">
@@ -339,7 +339,7 @@
             @if ($submenu->konten->kegiatan->gambar != null)
                 <img class="rounded" src="{{ $submenu->konten->kegiatan ? $submenu->konten->kegiatan->gambar() : 'no_image' }}"
                     alt="Gambar"
-                    style="width: 100%; height: 500px; object-fit: cover; border-top: 5px solid blue; border-bottom: 5px solid red;">
+                    style="width: 100%;">
             @endif
             <h1 class="mt-4 text-uppercase">{{ $submenu->konten->kegiatan->judul }}</h1>
             <div class="card border-0">

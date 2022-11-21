@@ -59,12 +59,12 @@
 @endsection
 
 @section('content')
-    <br><br><br>
+    <br>
     <div class="container mt-5">
         @if ($menu->konten->halaman != '')
             @if ($menu->konten->halaman->judul)
                 <header class="section-header">
-                    <p class="mt-4 text-uppercase">{{ $menu->konten->halaman->judul }}</p>
+                    <h2 class="mt-4 text-uppercase text-center">{{ $menu->konten->halaman->judul }}</h2>
                 </header>
             @endif
             {{-- Atas --}}
@@ -144,10 +144,11 @@
                 @endif
             </div>
             {{-- Akhir Atas --}}
+            
             @if ($menu->konten->halaman->gambar != null)
                 <img class="rounded" src="{{ $menu->konten->halaman ? $menu->konten->halaman->gambar() : 'no_image' }}"
                     alt="Gambar"
-                    style="width: 100%; height: 500px; object-fit: cover; border-top: 5px solid blue; border-bottom: 5px solid red;">
+                    style="width: 100%;">
             @endif
 
             @if ($menu->konten->halaman->teks)
@@ -325,23 +326,25 @@
                 @endif
             </div>
             {{-- Akhir Bawah --}}
+            
         @elseif ($menu->konten->artikel != '')
             @if ($menu->konten->artikel->gambar != null)
                 <img class="rounded" src="{{ $menu->konten->artikel ? $menu->konten->artikel->gambar() : 'no_image' }}"
                     alt="Gambar"
-                    style="width: 100%; height: 500px; object-fit: cover; border-top: 5px solid blue; border-bottom: 5px solid red;">
+                    style="width: 100%;">
             @endif
-            <h1 class="mt-4 text-uppercase">{{ $menu->konten->artikel->judul }}</h1>
+            <h1 class="mt-4 text-uppercase text-center">{{ $menu->konten->artikel->judul }}</h1>
             <div class="card border-0">
                 {!! $menu->konten->artikel->teks !!}
             </div>
+            
         @elseif ($menu->konten->kegiatan != '')
             @if ($menu->konten->kegiatan->gambar != null)
                 <img class="rounded" src="{{ $menu->konten->kegiatan ? $menu->konten->kegiatan->gambar() : 'no_image' }}"
                     alt="Gambar"
-                    style="width: 100%; height: 500px; object-fit: cover; border-top: 5px solid blue; border-bottom: 5px solid red;">
+                    style="width: 100%";>
             @endif
-            <h1 class="mt-4 text-uppercase">{{ $menu->konten->kegiatan->judul }}</h1>
+            <h1 class="mt-4 text-uppercase text-center">{{ $menu->konten->kegiatan->judul }}</h1>
             <div class="card border-0">
                 {!! $menu->konten->kegiatan->teks !!}
             </div>

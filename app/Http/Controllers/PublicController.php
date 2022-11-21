@@ -9,9 +9,6 @@ use App\Models\Tb_menu;
 use App\Models\Tb_peta;
 use App\Models\Tb_slide;
 use App\Models\Tb_submenu;
-use App\Models\Tb_sdm;
-use App\Models\Tb_wilayah;
-use App\Models\Tb_kelembagaan;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -26,11 +23,8 @@ class PublicController extends Controller
     {
         $menu = Tb_menu::find($tb_menu->id);
         $slide = Tb_slide::all();
-        $sdm = Tb_sdm::all();
-        $kelembagaan = Tb_kelembagaan::all();
-        $wilayah = Tb_wilayah::all();
         $kategoriGaleri = Tb_kategori_galeri::all();
-        return view('member.menu', compact('menu', 'sdm', 'kelembagaan', 'wilayah', 'slide', 'kategoriGaleri'));
+        return view('member.menu', compact('menu', 'slide', 'kategoriGaleri'));
     }
 
     public function submenu(Tb_submenu $tb_submenu)
@@ -38,10 +32,9 @@ class PublicController extends Controller
         $submenu = Tb_submenu::find($tb_submenu->id);
         $slide = Tb_slide::all();
         $kategoriGaleri = Tb_kategori_galeri::all();
-        $kelembagaan = Tb_kelembagaan::all();
-        $sdm = Tb_sdm::all();
-        $wilayah = Tb_wilayah::all();
-        return view('member.submenu', compact('submenu', 'sdm', 'kelembagaan', 'wilayah', 'slide', 'kategoriGaleri'));
+      
+       
+        return view('member.submenu', compact('submenu', 'slide', 'kategoriGaleri'));
     }
 
     public function galeri(Tb_kategori_galeri $tb_kategori_galeri)

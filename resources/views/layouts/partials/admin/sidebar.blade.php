@@ -122,6 +122,12 @@
                         <p>Settings</p>
                     </a>
                 </li>
+                <li class="nav-item {{ Request::is('admin/modulle') ? 'active' : '' }}">
+                    <a href="/admin/modulle">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                        <p>Module</p>
+                    </a>
+                </li>
                 {{-- <li class="nav-item {{ Request::is('admin/urutan') ? 'active' : '' }}">
                     <a href="/admin/urutan">
                         <i class="fa-solid fa-layer-group"></i>

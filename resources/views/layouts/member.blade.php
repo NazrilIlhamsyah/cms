@@ -29,10 +29,17 @@
 
         <!-- Template Stylesheet -->
         <link href={{ asset("assets/frontend/css/style.css") }} rel="stylesheet">
+
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />  --}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">        
     </head>
 
     <body>
-
+       
+      
+            <!-- Spinner End -->
+    
+    
         {{-- NAVBAR --}}
         @include('layouts.partials.member.navbar')
         {{-- END NAVBAR --}}
@@ -44,7 +51,8 @@
         {{-- FOOTER --}}
         @include('layouts.partials.member.footer')
         {{-- END FOOTER --}}
-
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+   
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -55,6 +63,9 @@
 
         <!-- Template Javascript -->
         <script src={{ asset("assets/frontend/js/main.js") }}></script>
+
+         {{-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> --}}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
     </body>
 
 </html>

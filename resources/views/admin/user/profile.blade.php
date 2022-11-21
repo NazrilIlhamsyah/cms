@@ -8,8 +8,8 @@
                     <h1 class="text-white pb-2 fw-bold">PROFILE</h1>
                 </div>
                 <div class="ml-md-auto py-2 py-md-0">
-                    <a class="btn btn-warning mr-2" data-toggle="modal" data-target="#edit" href="#">Edit Profile</a>
-                    <a class="btn btn-info text-white" data-toggle="modal" data-target="#editA" href="#">Edit Akun</a>
+                    <a class="btn btn-primary mr-2" data-toggle="modal" data-target="#edit" href="#">Edit Profile</a>
+                    <a class="btn btn-primary text-white" data-toggle="modal" data-target="#editA" href="#">Edit Akun</a>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
                         <div class="form-group">
                             <label for="jk" class="label">Jenis Kelamin</label>
                             <select name="jenis_kelamin" class="form-control"
-                                @error('jenis_kelamin') is-invalid @enderror" required>
+                                @error('jenis_kelamin') is-invalid @enderror required>
                                 <option value="">--- Pilih Jenis Kelamin ---</option>
                                 <option value="Laki-Laki" {{ $pengguna->jenis_kelamin == 'Laki-Laki' ? 'selected' : '' }}>
                                     Laki-Laki </option>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-warning text-white">Simpan Perubahan</button>
+                    <button type="submit" class="btn btn-primary text-white">Simpan Perubahan</button>
                 </div>
                 </form>
             </div>
@@ -164,14 +164,14 @@
         aria-hidden="true">
         <div class="modal-dialog modal-lg border-0" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-warning border-0">
+                <div class="modal-header bg-primary border-0">
                     <h5 class="modal-title" id="modalSayaLabel">Edit Data Akun</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="alert alert-warning" role="alert">
+                    <div class="alert alert-primary" role="alert">
                         <i class="fa-solid fa-triangle-exclamation mr-1"></i>
                         Isi data dibawah jika ingin mengubah Email atau Password anda.
                     </div>
@@ -192,11 +192,32 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="password" class="label">Password Lama</label>
+                            <input id="password" type="password"
+                                class="form-control @error('password_lama') is-invalid @enderror" name="password_lama"
+                                placeholder="Masukan password lama" autocomplete="new-password" required>
+                            @error('password_lama')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
                             <label for="password" class="label">Password Baru</label>
                             <input id="password" type="password"
                                 class="form-control @error('password') is-invalid @enderror" name="password"
-                                placeholder="Masukan password" autocomplete="new-password" required>
+                                placeholder="Masukan password baru" autocomplete="new-password" required>
                             @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="konfirmasi">Konfirmasi Password</label>
+                            <input type="password" name="password_confirmation" autocomplete="off"
+                                class="form-control @error('password_confirmation') is-invalid @enderror">
+                            @error('password_confirmation')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -205,7 +226,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-warning text-white">Simpan Perubahan</button>
+                    <button type="submit" class="btn btn-primary text-white">Simpan Perubahan</button>
                 </div>
                 </form>
             </div>

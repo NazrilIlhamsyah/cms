@@ -4,7 +4,7 @@
 
         <a href="/admin/dashboard" class="logo" style="margin-bottom: 12px; margin-left: 15px;">
             {{-- <img src="{{ asset('images/damkar-admin.png') }}" width="150px" alt="navbar brand" class="navbar-brand"> --}}
-            <h1 class="navbar-brand text-white mt-2">BELAJAR LINK</h2>
+            <h1 class="navbar-brand text-white mt-2">DIGMA</h2>
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse"
             aria-expanded="false" aria-label="Toggle navigation">

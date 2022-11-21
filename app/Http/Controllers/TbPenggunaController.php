@@ -194,7 +194,13 @@ class TbPenggunaController extends Controller
     {
         $request->validate([
             'email' => ['required', 'string', 'email', 'max:255'],
-            'password' => ['required', 'string', 'min:8']
+            'password_lama' => ['required', function($attr, $value, $fail) {
+                if(!Hash::check($value, Auth::user()->password)) {
+                    return $fail(__("Password Lama Tidak Sesuai"));
+                }
+            }],
+            'password' => ['required', 'string', 'min:8'],
+            'password_confirmation' => 'min:6|required_with:password|same:password'
         ]);
 
         $user = User::findOrFail($id);

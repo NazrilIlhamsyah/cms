@@ -1,1253 +1,734 @@
 @extends('layouts.member')
 
 @section('content')
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero d-flex align-items-center">
+<div class="container-fluid header bg-white p-0">
+    <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-6 p-5 mt-lg-5">
+            <h1 class="display-5 animated fadeIn mb-4 p-5">Find A <span class="text-primary">Perfect Home</span> To Live With Your Family</h1>
+            <p class="animated fadeIn mb-4 pb-2 p-5">Vero elitr justo clita lorem. Ipsum dolor at sed stet
+                sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+            <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
+        </div>
+        <div class="col-md-6 animated fadeIn">
+            <div class="owl-carousel header-carousel">
+            @foreach($slide as $data)
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with
-                        Bootstrap</h2>
-                    <div data-aos="fade-up" data-aos-delay="600">
-                        <div class="text-center text-lg-start">
-                            <a href="#about"
-                                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                                <span>Get Started</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="{{$data->gambar()}}" alt="">
+                </div>
+            @endforeach
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+<!-- Search Start -->
+<div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+    <div class="container">
+        <div class="row g-2">
+            <div class="col-md-10">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control border-0 py-3" placeholder="Search Keyword">
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select border-0 py-3">
+                            <option selected>Property Type</option>
+                            <option value="1">Property Type 1</option>
+                            <option value="2">Property Type 2</option>
+                            <option value="3">Property Type 3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select border-0 py-3">
+                            <option selected>Location</option>
+                            <option value="1">Location 1</option>
+                            <option value="2">Location 2</option>
+                            <option value="3">Location 3</option>
+                        </select>
                     </div>
                 </div>
-                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-dark border-0 w-100 py-3">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search End -->
+
+
+<!-- Category Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Property Types</h1>
+            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="img/icon-apartment.png" alt="Icon">
+                        </div>
+                        <h6>Apartment</h6>
+                        <span>123 Properties</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="img/icon-villa.png" alt="Icon">
+                        </div>
+                        <h6>Villa</h6>
+                        <span>123 Properties</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="img/icon-house.png" alt="Icon">
+                        </div>
+                        <h6>Home</h6>
+                        <span>123 Properties</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="img/icon-housing.png" alt="Icon">
+                        </div>
+                        <h6>Office</h6>
+                        <span>123 Properties</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="img/icon-building.png" alt="Icon">
+                        </div>
+                        <h6>Building</h6>
+                        <span>123 Properties</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="img/icon-neighborhood.png" alt="Icon">
+                        </div>
+                        <h6>Townhouse</h6>
+                        <span>123 Properties</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="img/icon-condominium.png" alt="Icon">
+                        </div>
+                        <h6>Shop</h6>
+                        <span>123 Properties</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="img/icon-luxury.png" alt="Icon">
+                        </div>
+                        <h6>Garage</h6>
+                        <span>123 Properties</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Category End -->
+
+
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                    <img class="img-fluid w-100" src="img/about.jpg">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="mb-4">#1 Place To Find The Perfect Property</h1>
+                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Property List Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-0 gx-5 align-items-end">
+            <div class="col-lg-6">
+                <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                    <h1 class="mb-3">Property Listing</h1>
+                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit diam justo sed rebum.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                    <li class="nav-item me-2">
+                        <a class="btn btn-outline-primary active" data-bs-toggle="pill" href="#tab-1">Featured</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-2">For Sell</a>
+                    </li>
+                    <li class="nav-item me-0">
+                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">For Rent</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane fade show p-0 active">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-2.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-3.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-4.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-5.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-6.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-2" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-2.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-3.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-4.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-5.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-6.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-3" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-2.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-3.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-4.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-5.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="img/property-6.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<!-- Property List End -->
 
-    </section><!-- End Hero -->
 
-    <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-
-            <div class="container" data-aos="fade-up">
-                <div class="row gx-0">
-
-                    <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="content">
-                            <h3>Who We Are</h3>
-                            <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat
-                                corrupti reprehenderit.</h2>
-                            <p>
-                                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor
-                                consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et
-                                est corrupti.
-                            </p>
-                            <div class="text-center text-lg-start">
-                                <a href="#"
-                                    class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                                    <span>Read More</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
+<!-- Call to Action Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="bg-light rounded p-3">
+            <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <img class="img-fluid rounded w-100" src="img/call-to-action.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="mb-4">
+                            <h1 class="mb-3">Contact With Our Certified Agent</h1>
+                            <p>Eirmod sed ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam justo sed vero dolor duo.</p>
                         </div>
+                        <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Make A Call</a>
+                        <a href="" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Get Appoinment</a>
                     </div>
-
-                    <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
-                    </div>
-
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<!-- Call to Action End -->
 
-        </section><!-- End About Section -->
 
-        <!-- ======= Values Section ======= -->
-        <section id="values" class="values">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Our Values</h2>
-                    <p>Odit est perspiciatis laborum et dicta</p>
-                </header>
-
-                <div class="row">
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <img src="assets/img/values-1.png" class="img-fluid" alt="">
-                            <h3>Ad cupiditate sed est odio</h3>
-                            <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Property Agents</h1>
+            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-                        <div class="box">
-                            <img src="assets/img/values-2.png" class="img-fluid" alt="">
-                            <h3>Voluptatem voluptatum alias</h3>
-                            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
-                        <div class="box">
-                            <img src="assets/img/values-3.png" class="img-fluid" alt="">
-                            <h3>Fugit cupiditate alias nobis.</h3>
-                            <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End Values Section -->
-
-        <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts">
-            <div class="container" data-aos="fade-up">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-emoji-smile"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                    class="purecounter"></span>
-                                <p>Happy Clients</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                                    class="purecounter"></span>
-                                <p>Projects</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-headset" style="color: #15be56;"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
-                                    class="purecounter"></span>
-                                <p>Hours Of Support</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-people" style="color: #bb0852;"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                                    class="purecounter"></span>
-                                <p>Hard Workers</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Counts Section -->
-
-        <!-- ======= Features Section ======= -->
-        <section id="features" class="features">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Features</h2>
-                    <p>Laboriosam et omnis fuga quis dolor direda fara</p>
-                </header>
-
-                <div class="row">
-
-                    <div class="col-lg-6">
-                        <img src="assets/img/features.png" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-                        <div class="row align-self-center gy-4">
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Eos aspernatur rem</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Facilis neque ipsa</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Volup amet voluptas</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Rerum omnis sint</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Alias possimus</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Repellendus mollitia</h3>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div> <!-- / row -->
-
-                <!-- Feature Tabs -->
-                <div class="row feture-tabs" data-aos="fade-up">
-                    <div class="col-lg-6">
-                        <h3>Neque officiis dolore maiores et exercitationem quae est seda lidera pat claero</h3>
-
-                        <!-- Tabs -->
-                        <ul class="nav nav-pills mb-3">
-                            <li>
-                                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Voluptates</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Corrupti</a>
-                            </li>
-                        </ul><!-- End Tabs -->
-
-                        <!-- Tab Content -->
-                        <div class="tab-content">
-
-                            <div class="tab-pane fade show active" id="tab1">
-                                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita.
-                                    Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                                </div>
-                                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi
-                                    dolorum non eveniet magni quaerat nemo et.</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                                </div>
-                                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur.
-                                    Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo
-                                    tempora. Quia et perferendis.</p>
-                            </div><!-- End Tab 1 Content -->
-
-                            <div class="tab-pane fade show" id="tab2">
-                                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita.
-                                    Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                                </div>
-                                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi
-                                    dolorum non eveniet magni quaerat nemo et.</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                                </div>
-                                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur.
-                                    Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo
-                                    tempora. Quia et perferendis.</p>
-                            </div><!-- End Tab 2 Content -->
-
-                            <div class="tab-pane fade show" id="tab3">
-                                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita.
-                                    Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                                </div>
-                                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi
-                                    dolorum non eveniet magni quaerat nemo et.</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                                </div>
-                                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur.
-                                    Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo
-                                    tempora. Quia et perferendis.</p>
-                            </div><!-- End Tab 3 Content -->
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-                        <img src="assets/img/features-2.png" class="img-fluid" alt="">
-                    </div>
-
-                </div><!-- End Feature Tabs -->
-
-                <!-- Feature Icons -->
-                <div class="row feature-icons" data-aos="fade-up">
-                    <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3>
-
-                    <div class="row">
-
-                        <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-                            <img src="assets/img/features-3.png" class="img-fluid p-4" alt="">
-                        </div>
-
-                        <div class="col-xl-8 d-flex content">
-                            <div class="row align-self-center gy-4">
-
-                                <div class="col-md-6 icon-box" data-aos="fade-up">
-                                    <i class="ri-line-chart-line"></i>
-                                    <div>
-                                        <h4>Corporis voluptates sit</h4>
-                                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut
-                                            aliquip</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                                    <i class="ri-stack-line"></i>
-                                    <div>
-                                        <h4>Ullamco laboris nisi</h4>
-                                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                            deserunt</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                                    <i class="ri-brush-4-line"></i>
-                                    <div>
-                                        <h4>Labore consequatur</h4>
-                                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                                    <i class="ri-magic-line"></i>
-                                    <div>
-                                        <h4>Beatae veritatis</h4>
-                                        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                                    <i class="ri-command-line"></i>
-                                    <div>
-                                        <h4>Molestiae dolor</h4>
-                                        <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                                    <i class="ri-radar-line"></i>
-                                    <div>
-                                        <h4>Explicabo consectetur</h4>
-                                        <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div><!-- End Feature Icons -->
-
-            </div>
-
-        </section><!-- End Features Section -->
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Services</h2>
-                    <p>Veritatis et dolores facere numquam et praesentium</p>
-                </header>
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-box blue">
-                            <i class="ri-discuss-line icon"></i>
-                            <h3>Nesciunt Mete</h3>
-                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure
-                                perferendis tempore et consequatur.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-box orange">
-                            <i class="ri-discuss-line icon"></i>
-                            <h3>Eosle Commodi</h3>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic
-                                non ut nesciunt dolorem.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-box green">
-                            <i class="ri-discuss-line icon"></i>
-                            <h3>Ledo Markt</h3>
-                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas
-                                adipisci eos earum corrupti.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-box red">
-                            <i class="ri-discuss-line icon"></i>
-                            <h3>Asperiores Commodi</h3>
-                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit
-                                provident adipisci neque.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-box purple">
-                            <i class="ri-discuss-line icon"></i>
-                            <h3>Velit Doloremque.</h3>
-                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi
-                                at autem alias eius labore.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-                        <div class="service-box pink">
-                            <i class="ri-discuss-line icon"></i>
-                            <h3>Dolori Architecto</h3>
-                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure.
-                                Corrupti recusandae ducimus enim.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End Services Section -->
-
-        <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Pricing</h2>
-                    <p>Check our Pricing</p>
-                </header>
-
-                <div class="row gy-4" data-aos="fade-left">
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="box">
-                            <h3 style="color: #07d5c0;">Free Plan</h3>
-                            <div class="price"><sup>$</sup>0<span> / mo</span></div>
-                            <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li class="na">Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
-                            </ul>
-                            <a href="#" class="btn-buy">Buy Now</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="box">
-                            <span class="featured">Featured</span>
-                            <h3 style="color: #65c600;">Starter Plan</h3>
-                            <div class="price"><sup>$</sup>19<span> / mo</span></div>
-                            <img src="assets/img/pricing-starter.png" class="img-fluid" alt="">
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
-                            </ul>
-                            <a href="#" class="btn-buy">Buy Now</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="box">
-                            <h3 style="color: #ff901c;">Business Plan</h3>
-                            <div class="price"><sup>$</sup>29<span> / mo</span></div>
-                            <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <a href="#" class="btn-buy">Buy Now</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="box">
-                            <h3 style="color: #ff0071;">Ultimate Plan</h3>
-                            <div class="price"><sup>$</sup>49<span> / mo</span></div>
-                            <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <a href="#" class="btn-buy">Buy Now</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End Pricing Section -->
-
-        <!-- ======= F.A.Q Section ======= -->
-        <section id="faq" class="faq">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>F.A.Q</h2>
-                    <p>Frequently Asked Questions</p>
-                </header>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!-- F.A.Q List 1-->
-                        <div class="accordion accordion-flush" id="faqlist1">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq-content-1">
-                                        Non consectetur a erat nam at lectus urna duis?
-                                    </button>
-                                </h2>
-                                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                                    <div class="accordion-body">
-                                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
-                                        non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
-                                        purus non.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq-content-2">
-                                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
-                                    </button>
-                                </h2>
-                                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                                    <div class="accordion-body">
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                        donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq-content-3">
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
-                                    </button>
-                                </h2>
-                                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                                    <div class="accordion-body">
-                                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                        pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit.
-                                        Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis
-                                        tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <!-- F.A.Q List 2-->
-                        <div class="accordion accordion-flush" id="faqlist2">
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq2-content-1">
-                                        Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                                    </button>
-                                </h2>
-                                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                                    <div class="accordion-body">
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                        donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq2-content-2">
-                                        Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                                    </button>
-                                </h2>
-                                <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                                    <div class="accordion-body">
-                                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
-                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl
-                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq2-content-3">
-                                        Varius vel pharetra vel turpis nunc eget lorem dolor?
-                                    </button>
-                                </h2>
-                                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                                    <div class="accordion-body">
-                                        Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
-                                        integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                                        eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                                        Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
-                                        Nibh tellus molestie nunc non blandit massa enim nec.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End F.A.Q Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Portfolio</h2>
-                    <p>Check our latest work</p>
-                </header>
-
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
                     </div>
                 </div>
-
-                <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 2</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 3</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 3</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                                        class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
-
-        </section><!-- End Portfolio Section -->
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Testimonials</h2>
-                    <p>What they are saying about us</p>
-                </header>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
-                                        alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
-                                        alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                                    duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
-                                        alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
-                                    minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
-                                    labore illum veniam.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
-                                        alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
-                                        alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-
-        </section><!-- End Testimonials Section -->
-
-        <!-- ======= Team Section ======= -->
-        <section id="team" class="team">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Team</h2>
-                    <p>Our hard working team</p>
-                </header>
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
-                                    exercitationem iure minima enim corporis et voluptate.</p>
-                            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit
-                                    corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
-                            </div>
-                        </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates
-                                    enim aut architecto porro aspernatur molestiae modi.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid
-                                    doloremque ut possimus ipsum officia.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End Team Section -->
-
-        <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Our Clients</h2>
-                    <p>Temporibus omnis officia</p>
-                </header>
-
-                <div class="clients-slider swiper">
-                    <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid"
-                                alt=""></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-
-        </section><!-- End Clients Section -->
-
-        <!-- ======= Recent Blog Posts Section ======= -->
-        <section id="recent-blog-posts" class="recent-blog-posts">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Blog</h2>
-                    <p>Recent posts form our Blog</p>
-                </header>
-
-                <div class="row">
-
-                    <div class="col-lg-4">
-                        <div class="post-box">
-                            <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <span class="post-date">Tue, September 15</span>
-                            <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit
-                            </h3>
-                            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-
-                    <div class="col-lg-4">
-                        <div class="post-box">
-                            <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <span class="post-date">Fri, August 28</span>
-                            <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-                            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
                     </div>
-
-                    <div class="col-lg-4">
-                        <div class="post-box">
-                            <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <span class="post-date">Mon, July 11</span>
-                            <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-                            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
-
-        </section><!-- End Recent Blog Posts Section -->
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Contact</h2>
-                    <p>Contact Us</p>
-                </header>
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-6">
-
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
-                                    <p>A108 Adam Street,<br>New York, NY 535022</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    <p>info@example.com<br>contact@example.com</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday<br>9:00AM - 05:00PM</p>
-                                </div>
-                            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/team-4.jpg" alt="">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
                         </div>
-
                     </div>
-
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form">
-                            <div class="row gy-4">
-
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
-                                        required>
-                                </div>
-
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                        required>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                        required>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
-
-                            </div>
-                        </form>
-
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
                     </div>
-
                 </div>
-
             </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
 
-        </section><!-- End Contact Section -->
 
-    </main><!-- End #main -->
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Our Clients Say!</h1>
+            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
 @endsection

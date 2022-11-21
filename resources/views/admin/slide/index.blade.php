@@ -157,7 +157,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-dark"
                                                     data-dismiss="modal">Tutup</button>
-                                                <button type="submit" class="btn btn-warning text-white">Simpan
+                                                <button type="submit" class="btn btn-primary text-white">Simpan
                                                     Perubahan</button>
                                             </div>
                                             </form>
